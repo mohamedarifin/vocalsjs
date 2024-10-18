@@ -1,0 +1,232 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:cursive
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .vocals_player{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: black;
+            background: rgb(255, 255, 255);
+        }
+        .vocal_img{
+            width: 250px;
+            height: 250px;
+            background: #000000;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .vocal_img img{
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+            border-radius: 10px;
+        }   
+        .vocal_authour{
+            font-weight: 900;
+            margin-top: 10px;
+        }
+        .vocal_name{
+            width: 250px;
+            text-align: center;
+        }
+        .progress{
+            accent-color: rgb(0, 0, 0);
+        }
+        #ctrlbtn{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            padding-top: 4px;
+            border-radius: 50%;
+            text-align: center;
+            padding-left: 3px;
+        }
+        .vocal_ctrls{
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .vocal_ctrls .bi{
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            cursor: pointer;
+            font-size: 35px;
+        }
+        .vocal_bar{
+            width: 250px;
+            height: 40px;
+            margin: 5px 0px;
+        }
+        .vocal_progress{
+            display: flex;
+            flex-direction: column;
+        }
+        .progress{
+            width:250px;
+            height: 5px;
+            margin: 5px 0px;
+        }
+         .vocal_time{
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+        <div class="vocals_player">
+            <div class="vocal_img">
+                <img src="audio_imgs/kullu_nafsin.jpg" alt="">
+            </div>
+            <div class="vocal_authour">
+            </div>
+            <div class="vocal_name">
+                <marquee ></marquee>
+            </div>
+            <div class="vocal_bar">
+                <audio  src="audio\Salat_Salam_-_Latest_NO_M_(getmp3.pro).mp3" class="song"></audio>
+                <div class="vocal_progress">
+                    <div class="vocal_time">
+                        <div class="vocal_start"></div>
+                        <div class="vocal_end"></div>
+                    </div>
+                    <input type="range" class="progress" value='0'>
+                </div>  
+            </div>
+            <div class="vocal_ctrls">
+                <i class="bi bi-skip-backward" id="for_btn"></i>
+                <i class="bi bi-play" id="ctrlbtn"></i>
+                <i class="bi bi-skip-forward" id="back_btn"></i>
+            </div>
+        </div>
+    <script>
+        let song = document.querySelector('.song');
+        let progress = document.querySelector('.progress');
+        let playbtn = document.querySelector('#ctrlbtn');
+        let vocal_start = document.querySelector('.vocal_start');
+        let vocal_end = document.querySelector('.vocal_end');
+        let vocal_img = document.querySelector('.vocal_img img');
+        let vocal_authour = document.querySelector('.vocal_authour');
+        let vocal_title = document.querySelector('.vocal_name marquee');
+        let for_btn = document.querySelector('#for_btn');
+        let back_btn = document.querySelector('#back_btn');
+        let count = 0;
+        async function call(count) {
+            let data = await fetch('vocals.json');
+            let vocalData = await data.json();
+            song.src = vocalData[count].vocal_url;
+            vocal_img.src = vocalData[count].vocal_img;
+            console.log(song.src)
+            vocal_authour.innerHTML = vocalData[count].authour;
+            vocal_title.innerHTML = vocalData[count].title;
+            return vocalData.length;
+
+        }
+        call(count).then((ans)=>{
+
+        for_btn.addEventListener('click',()=>{
+            playbtn.classList.remove("bi-pause");
+            playbtn.classList.add('bi-play');
+        if(count>=ans-1){
+            count = 0;
+            call(count);
+        }else{
+            call(++count);
+        }
+        })
+
+        back_btn.addEventListener('click',()=>{
+            playbtn.classList.remove("bi-pause");
+            playbtn.classList.add('bi-play');
+        if(count<=0){
+            count =ans-1;
+            call(count);
+        }else{
+            call(--count);
+        }
+        })
+        })
+        song.onloadedmetadata = function(){
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+
+            let end_min = Math.floor(song.duration/60);
+            let end_sec = Math.floor(song.duration) - (Math.floor(song.duration/60)*60);
+            vocal_end.innerHTML = `0${end_min}:${end_sec}`
+        }
+
+        playbtn.addEventListener('click',()=>{
+            if(playbtn.classList.contains('bi-play')){
+                song.play()
+                playbtn.classList.remove("bi-play");
+                playbtn.classList.add('bi-pause');
+            }else{
+                song.pause();
+                playbtn.classList.remove("bi-pause");
+                playbtn.classList.add('bi-play');
+            }
+        })
+        
+        
+        setInterval(()=>{
+            progress.value = song.currentTime;
+            let hour = 0;
+            let minutes = 0;
+            vocal_start.innerHTML = `0${hour}:${Math.floor(song.currentTime)}`;
+            if(Math.floor(song.currentTime)>59){
+                hour++;
+                minutes = Math.floor(song.currentTime)-60;
+                vocal_start.innerHTML = `0${hour}:${minutes}`;
+            }
+            if(Math.floor(song.currentTime)>119){
+                hour++;
+                minutes = minutes-60;
+                vocal_start.innerHTML = `0${hour}:${minutes}`;
+            }
+            if(Math.floor(song.currentTime)>179){
+                hour++;
+                minutes = minutes-60;
+                vocal_start.innerHTML = `0${hour}:${minutes}`;
+            }
+            if(Math.floor(song.currentTime)>239){
+                hour++;
+                minutes = minutes-60;
+                vocal_start.innerHTML = `0${hour}:${minutes}`;
+            }
+            if(Math.floor(song.currentTime)>299){
+                hour++;
+                minutes = minutes-60;
+                vocal_start.innerHTML = `0${hour}:${minutes}`;
+            }
+        },1000);
+        progress.addEventListener('change',()=>{
+            song.currentTime = progress.value;
+            song.play();
+            playbtn.classList.remove("bi-play");
+            playbtn.classList.add('bi-pause');
+        })
+    </script>
+</body>
+</html>

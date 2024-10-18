@@ -1,0 +1,207 @@
+[
+    {
+        "id" :0,
+        "authour" :"Muhammed al Muqit",
+        "title" : "Allahu_Heart_Touching_Nasheed",
+        "vocal_url" : "audio/Allahu_Heart_Touching_Nasheed_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/maxresdefault.jpg"
+    },
+    {
+        "id" :1,
+        "authour" :"Muhammed al Muqit",
+        "title" : "ALULA_DAN_AISY_-_RAHMATUN_LIL_ALAMI",
+        "vocal_url" : "audio/ALULA_DAN_AISY_-_RAHMATUN_LIL_ALAMI_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/rahmathul.jpg"
+    },
+    {
+        "id" :2,
+        "authour" :"Abdul Rahman Mosad",
+        "title" : "An_Naba_by_Abdul_Rahman_Mosad",
+        "vocal_url" : "audio/An_Naba_by_Abdul_Rahman_Mosad_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/surah_naba.jpg"
+    },
+    {
+        "id" :3,
+        "authour" :"Muhammed al Muqit",
+        "title" : "Benevolent Rain - Uplifting Nasheed by Muhammad al Muqit",
+        "vocal_url" : "audio/Benevolent Rain - Uplifting Nasheed by Muhammad al Muqit [TubeRipper.com].mp3",
+        "vocal_img" : "audio_imgs/Benevolent.jpg"
+    },
+    {
+        "id" :4,
+        "authour" :"Abdur Rahman masood",
+        "title" : "Every_soul_will_taste_death_-_Kullu_nafsin_zaikatul_maut_-_کل_نفس_ذائقہ_الموت_-_Abdur_Rahman_masood",
+        "vocal_url" : "audio/Every_soul_will_taste_death_-_Kullu_nafsin_zaikatul_maut_-_کل_نفس_ذائقہ_الموت_-_Abdur_Rahman_masood.mp3",
+        "vocal_img" : "audio_imgs/kullu_nafsin.jpg"
+    },
+    {
+        "id" :5,
+        "authour" :"Muhammed al Muqit",
+        "title" : "Forgive_Me_Allah_-_Astagfirullah",
+        "vocal_url" : "audio/Forgive_Me_Allah_-_Astagfirullah_-_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/forgive_me_allah.jpg"
+    },
+    {
+        "id" :6,
+        "authour" :"No music club",
+        "title" : "Hasbi_Rabbi_Remake_Latest_NO-MUSIC",
+        "vocal_url" : "audio/Hasbi_Rabbi_Remake_Latest_NO-MUSIC_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/Hasbi_Rabbi.jpg"
+    },
+    {
+        "id" :7,
+        "authour" :"Halal Brothers",
+        "title" : "Heart_Melting_Quran_Recitation",
+        "vocal_url" : "audio/Heart_Melting_Quran_Recitation_B_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/heart_melting.jpg"
+    },
+    {
+        "id" :8,
+        "authour" :"Merciful Servent",
+        "title" : "I_Rise_-_Motivational_Nasheed",
+        "vocal_url" : "audio/I_Rise_-_Motivational_Nasheed_-_By_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/I_Rise_Motivational.jpg"
+    },
+    {
+        "id" :9,
+        "authour" :"Muhammed al Muqit",
+        "title" : "Jundullah_Soldiers_of_Allah",
+        "vocal_url" : "audio/Jundullah_Soldiers_of_Allah__(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/Zundullah.jpg"
+    },
+    {
+        "id" :10,
+        "authour" :"La_Yazal_al_Khayr",
+        "title" : "La_Yazal_al_Khayr_-_Lyrics",
+        "vocal_url" : "audio/La_Yazal_al_Khayr_-_Lyrics_Anime_V_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/layazalul.jpg"
+    },
+    {
+        "id" :11,
+        "authour" :"NO MUSIC MEDIA",
+        "title" : "Muhammad_Nabina_2020",
+        "vocal_url" : "audio/Muhammad_Nabina_2020_-_Latest_NO_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/muhamed nabina.jpg"
+    },
+    {
+        "id" :12,
+        "authour" :"nasheed_Mishary",
+        "title" : "Mustafa_Mustafa_new_nasheed_Mishary_",
+        "vocal_url" : "audio/Mustafa_Mustafa_new_nasheed_Mishary_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/musthafa.jpg"
+    },
+    {
+        "id" :13,
+        "authour" :"Nasheed_By_Muh",
+        "title" : "My_Arabic_Language_-_Nasheed_By_Muh",
+        "vocal_url" : "audio/My_Arabic_Language_-_Nasheed_By_Muh_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/my arabic.jpg"
+    },
+    {
+        "id" :14,
+        "authour" :"Muhammad_",
+        "title" : "My_Hope_Allah_Nasheed_By_Muhammad_",
+        "vocal_url" : "audio/My_Hope_Allah_Nasheed_By_Muhammad_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/my hope.jpg"
+    },
+    {
+        "id" :15,
+        "authour" :"LiyaKun_lyrics",
+        "title" : "Nasheed_-_LiyaKun_lyrics",
+        "vocal_url" : "audio/Nasheed_-_LiyaKun_lyrics_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/liyakun.jpg"
+    },
+    {
+        "id" :16,
+        "authour" :"Ahmed_Bukhati",
+        "title" : "Nasheed_Ya_Adheeman_-_Ahmed_Bukhati",
+        "vocal_url" : "audio/Nasheed_Ya_Adheeman_-_Ahmed_Bukhati_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/ya adheman.jpg"
+    },
+    {
+        "id" :17,
+        "authour" :"Merciful Servent",
+        "title" : "Oh_My_Soul_-_Emotional_Nasheed_",
+        "vocal_url" : "audio/Oh_My_Soul_-_Emotional_Nasheed_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/mysoul.jpg"
+    },
+    {
+        "id" :18,
+        "authour" :"_Mishary_Rashid_Al_",
+        "title" : "Rahman_Ya_Rahman-_Mishary_Rashid_Al_",
+        "vocal_url" : "audio/Rahman_Ya_Rahman-_Mishary_Rashid_Al_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/ya rahman.jpg"
+    },
+    {
+        "id" :19,
+        "authour" :"NO MUSIC MEDIA",
+        "title" : "Salat_Salam_-_Latest_NO MUSIC ",
+        "vocal_url" : "audio/Salat_Salam_-_Latest_NO_M_(getmp3.pro).mp3",
+        "vocal_img" : "audio_imgs/salatsalam.jpg"
+    },
+    {
+        "id" :20,
+        "authour" :"Merciful Servent",
+        "title" : "SYRIA_-_Very_Powerful_Emotional_Nas_",
+        "vocal_url" : "audio/SYRIA_-_Very_Powerful_Emotional_Nas_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/syria.jpg"
+    },
+    {
+        "id" :21,
+        "authour" :"NO MUSIC MEDIA",
+        "title" : "Tasbih_-_Latest_NO_MUSIC_Version",
+        "vocal_url" : "audio/Tasbih_-_Latest_NO_MUSIC_Version__(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/tasbih.jpg"
+    },
+    {
+        "id" :22,
+        "authour" :"Muhammed al Muqit",
+        "title" : "Thank_You_Allah_-_NASHEED_",
+        "vocal_url" : "audio/Thank_You_Allah_-_NASHEED_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/thankyou.jpg"
+    },
+    {
+        "id" :23,
+        "authour" :"Muhammed al Muqit",
+        "title" : "The_Beauty_of_Existence_-_Heart_Tou_",
+        "vocal_url" : "audio/The_Beauty_of_Existence_-_Heart_Tou_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/beautyofexistence.jpg"
+    },
+    {
+        "id" :24,
+        "authour" :"Muhammed al Muqit",
+        "title" : "The_Way_of_The_Tears_-_Exclusive_Na_",
+        "vocal_url" : "audio/The_Way_of_The_Tears_-_Exclusive_Na_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/TheWayofTheTears.jpg"
+    },
+    {
+        "id" :25,
+        "authour" :"TubeRipper",
+        "title" : "Ummi أمي (My Mother) I Love My Mother",
+        "vocal_url" : "audio/Ummi أمي (My Mother) I Love My Mother - Latest NO MUSIC Version (Lyrics) [TubeRipper.com].mp3",
+        "vocal_img" : "audio_imgs/ummi.jpg"
+    },
+    {
+        "id" :26,
+        "authour" :"Maher Zain",
+        "title" : "Ya_Nabi_salam_alayka_Arabic_Naat__",
+        "vocal_url" : "audio/Ya_Nabi_salam_alayka_Arabic_Naat__(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/yanabi.jpg"
+    },
+    {
+        "id" :27,
+        "authour" :"Aysha Abdul Basith",
+        "title" : "Ya_Taiba_2020_-_Latest_NO_MUSIC_V",
+        "vocal_url" : "audio/Ya_Taiba_2020_-_Latest_NO_MUSIC_V_(getmp3.pro).mp3", 
+        "vocal_img" : "audio_imgs/yataiba.jpg"
+    }
+]
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
