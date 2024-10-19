@@ -40,11 +40,15 @@
         }   
         .vocal_authour{
             font-weight: 900;
-            margin-top: 10px;
+            margin-top: 20px;
+            font-size: 25px;
         }
         .vocal_name{
             width: 250px;
             text-align: center;
+            font-weight: 900;
+            font-size: 20px;
+            margin-top: 10px;
         }
         .progress{
             accent-color: rgb(0, 0, 0);
@@ -62,11 +66,19 @@
             width: 250px;
             height: 50px;
             border-radius: 10px;
+            position: relative;
+        }
+        .ctrls_btns{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-around;
         }
-        .vocal_ctrls .bi{
+        .vocal_ctrls .ctrls_btns .bi{
             border-radius: 10px;
             color: rgb(0, 0, 0);
             text-align: center;
@@ -93,6 +105,64 @@
             width: 250px;
             font-size: 15px;
         }
+        .loader{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            color: black;
+            font-weight: 900;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .spin{
+            border-top: 5px solid rgb(255, 255, 255);
+            border-bottom: 5px solid #ffffff;
+            border-left: 5px solid white;
+            border-right: 5px solid white;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            animation: load 2s infinite linear;
+        }
+        @keyframes load{
+            0%{
+                transform: rotate(360deg);
+                border-top: 5px solid #ffffff;
+                border-bottom: 5px solid black;
+                border-left: 5px solid rgb(0, 0, 0);
+                border-right: 5px solid black;
+            }
+            25%{
+                border-top: 5px solid #ffffff;
+                border-right: 5px solid #ffffff;
+                border-left: 5px solid rgb(0, 0, 0);
+                border-bottom: 5px solid black;
+            }
+            50%{
+                border-top: 5px solid #ffffff;
+                border-bottom: 5px solid rgb(255, 255, 255);
+                border-right: 5px solid rgb(255, 255, 255);
+                border-left: 5px solid black;
+            }
+            75%{
+                border-top: 5px solid #ffffff;
+                border-bottom: 5px solid #ffffff;
+                border-left: 5px solid #ffffff;
+                border-right: 5px solid white;
+            }
+        }
+        .end_loading{
+            filter: opacity(0);
+            transform: scale(0);
+        }
     </style>
 </head>
 <body>
@@ -116,9 +186,15 @@
                 </div>  
             </div>
             <div class="vocal_ctrls">
-                <i class="bi bi-skip-backward" id="for_btn"></i>
-                <i class="bi bi-play" id="ctrlbtn"></i>
-                <i class="bi bi-skip-forward" id="back_btn"></i>
+                <div class="loader">
+                    <div class="spin"></div>
+                    <p>Loading...Wait</p>
+                </div>
+                <div class="ctrls_btns">
+                    <i class="bi bi-skip-backward" id="for_btn"></i>
+                    <i class="bi bi-play" id="ctrlbtn"></i>
+                    <i class="bi bi-skip-forward" id="back_btn"></i>
+                </div>
             </div>
         </div>
     <script>
@@ -226,6 +302,11 @@
             song.play();
             playbtn.classList.remove("bi-play");
             playbtn.classList.add('bi-pause');
+        })
+
+        window.addEventListener("load",()=>{
+            var container = document.querySelector('.loader');
+            container.classList="end_loading";
         })
     </script>
 </body>
