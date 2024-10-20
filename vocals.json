@@ -194,6 +194,13 @@
         "title" : "Ya_Taiba_2020_-_Latest_NO_MUSIC_V",
         "vocal_url" : "audio/Ya_Taiba_2020_-_Latest_NO_MUSIC_V_(getmp3.pro).mp3", 
         "vocal_img" : "audio_imgs/yataiba.jpg"
+    },
+    {
+        "id" :28,
+        "authour" : "Muhammed al Muqit",
+        "title" : "Wedding Nasheed - ( Lyrics + English Translation ) Muhammad Al Muqit",
+        "vocal_url" :"audio/Wedding Nasheed - ( Lyrics + English Translation ) Muhammad Al Muqit [TubeRipper.com].mp3",
+        "vocal_img" : "audio_imgs/wedding.jpg"
     }
 ]
 
