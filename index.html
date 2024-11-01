@@ -14,23 +14,26 @@
         body{
             width: 100vw;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .vocals_player{
-            width: 100%;
-            height: 100%;
+            min-width: 250px;
+            min-height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             color: black;
-            background: rgb(255, 255, 255);
         }
         .vocal_img{
             width: 250px;
-            height: 250px;
+            height: 200px;
             background: #000000;
             overflow: hidden;
             border-radius: 10px;
+            margin-top: 20px;
         }
         .vocal_img img{
             width: 100%;
@@ -142,10 +145,29 @@
         .end_loading{
             transform: scale(0);
         }
+        .played_result{
+            font-weight: 900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: green;
+            animation:space 1s infinite linear;
+            display: none;
+        }
+        @keyframes space{
+            0%{
+                color: rgb(255, 0, 0);
+            }
+            33%{
+                color: rgb(4, 255, 0);
+            }
+            66%{
+                color:blue;
+            }
+        }
     </style>
 </head>
 <body>
         <div class="vocals_player">
+            <div class="played_result">Music <span class="rota">Is </span>Playing</div>
             <div class="vocal_img">
                 <img src="audio_imgs/kullu_nafsin.jpg" alt="">
             </div>
@@ -187,6 +209,7 @@
         let vocal_title = document.querySelector('.vocal_name marquee');
         let for_btn = document.querySelector('#for_btn');
         let back_btn = document.querySelector('#back_btn');
+        let played_result = document.querySelector('.played_result');
         let count = 0;
         async function call(count) {
             let data = await fetch('vocals.json');
@@ -204,7 +227,8 @@
         for_btn.addEventListener('click',()=>{
             playbtn.classList.remove("bi-pause");
             playbtn.classList.add('bi-play');
-        if(count>=ans-1){
+            played_result.style.display='none';
+            if(count>=ans-1){
             count = 0;
             call(count);
         }else{
@@ -215,7 +239,8 @@
         back_btn.addEventListener('click',()=>{
             playbtn.classList.remove("bi-pause");
             playbtn.classList.add('bi-play');
-        if(count<=0){
+            played_result.style.display='none';
+            if(count<=0){
             count =ans-1;
             call(count);
         }else{
@@ -237,10 +262,12 @@
                 song.play()
                 playbtn.classList.remove("bi-play");
                 playbtn.classList.add('bi-pause');
+                played_result.style.display='block';
             }else{
                 song.pause();
                 playbtn.classList.remove("bi-pause");
                 playbtn.classList.add('bi-play');
+                played_result.style.display='none';
             }
         })
         
@@ -281,6 +308,7 @@
             song.play();
             playbtn.classList.remove("bi-play");
             playbtn.classList.add('bi-pause');
+            played_result.style.display='block';
         })
 
         window.addEventListener("load",()=>{
